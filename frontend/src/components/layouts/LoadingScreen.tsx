@@ -9,4 +9,4 @@ const LoadingScreen: FC = () => {
 	)
 }
 
-export default LoadingScreen
+export default LoadingScreen;

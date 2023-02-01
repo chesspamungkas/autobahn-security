@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { MainLayout } from "../../components/layouts";
 import InputValidation from "../../helpers/InputValidation";
-import autobahnLogo from '../../assets/Autobahn_Security_Logo.svg';
 import Http from "../../helpers/Fetch";
 import AuthUser from "../../helpers/AuthUser";
 import AuthAttributes from "../../interface/AuthUserInterface";
+import autobahnLogo from '../../assets/Autobahn_Security_Logo.svg';
 
 interface DataLogin {
 	email?: string | null,
@@ -128,7 +128,6 @@ const Login: FC = () => {
 								error={errData.email}
 								onChange={onChange}
 							/>
-							{/* <input type="text" placeholder="email" className="w-full p-2 border border-gray-300 rounded mt-1" /> */}
 						</div>
 						<div className='mb-3'>
 							<CustomInput
@@ -141,17 +140,14 @@ const Login: FC = () => {
 								error={errData.password}
 								onChange={onChange}
 							/>
-							{/* <input type="password" placeholder="password" className="w-full p-2 border border-gray-300 rounded mt-1" /> */}
 						</div>
 						<div className="flex justify-between items-center">
 							<p className="">Don't have account ? <span
 								className=" text-secondary-50 cursor-pointer hover:text-link-color"
-								onClick={() => navigate("/auth/register")}>Signup</span></p>
-							{/* <button onClick={onSubmit} className=" btn btn-primary normal-case">Login</button> */}
+								onClick={() => navigate("/auth/register")}>Register</span></p>
 						</div>
 						<div>
 							<button onClick={onSubmit} className="py-2 px-6 bg-green-600 hover:bg-link-color rounded-md text-white text-bg">Login</button>
-							{/* <button className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md text-white text-bg">Login</button> */}
 						</div>
 						{/* <div className="flex items-center justify-between">
 							<div className="flex items-center">

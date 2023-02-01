@@ -1,10 +1,9 @@
 import React, { FC, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import Header from "./Header";
+import LoadingScreen from "./LoadingScreen";
 import Sidebar from "./Sidebar";
 import Http from "../../helpers/Fetch";
-import LoadingScreen from "./LoadingScreen";
-
 import AuthUser from "../../helpers/AuthUser";
 
 
@@ -36,10 +35,10 @@ const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
 		<LoadingScreen />
 	) : (
 		<div className="flex relative bg-gray-100 overflow-x-hidden min-h-screen antialiased">
-			<Sidebar open={open} closeMenu={() => setOpen(!open)} />
+			<Sidebar open={open} closeMenu={() => setOpen(!open)} logout={logout} />
 			<div className="w-full relative ml-0 lg:ml-64">
 				<Header logout={logout} changeOpen={() => setOpen(!open)} />
-				<main className="w-full mt-16">
+				<main className="w-full mt-32">
 					{children}
 				</main>
 			</div>

@@ -72,8 +72,10 @@ const Register: FC = () => {
 				icon: "question",
 				text: "Are you sure ?",
 				cancelButtonText: "Cancel",
-				confirmButtonText: "Sign Up",
-				showCancelButton: true
+				confirmButtonText: "Register",
+				showCancelButton: true,
+				confirmButtonColor: "#ff4d00",
+				cancelButtonColor: "#012619"
 			}).then((res) => {
 				if (res.isConfirmed) {
 					SignUp();
